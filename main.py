@@ -3,25 +3,13 @@ from pydantic import BaseModel, Field
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello World"}
-
 class CoffeeLogCreate(BaseModel):
     bean_name: str = Field(min_length=1)
     water_g: int
     dose_g: int
     overall_score: int = Field(ge=1, le=5)
 
-logs = [
-    {
-        "id": 1,
-        "bean_name": "Ethiopia",
-        "water_g": 250,
-        "dose_g": 15,
-        "overall_score": 4
-    }
-]
+logs = []
 
 @app.get("/logs")
 def read_logs():
