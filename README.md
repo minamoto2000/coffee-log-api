@@ -3,9 +3,14 @@
 コーヒー抽出ログを記録するためのFastAPI学習用アプリです。
 
 ## 現在できること
-- FastAPIの起動確認
-- GET / で疎通確認
-- POST /logs でログデータの受け取りとバリデーション
+- FastAPIでAPIを起動できる
+- SQLiteにコーヒーログを保存できる
+- GET /logs でログ一覧を取得できる
+- GET /logs/{log_id} でログを1件取得できる
+- POST /logs でログを作成できる
+- PUT /logs/{log_id} で overall_score を更新できる
+- DELETE /logs/{log_id} でログを削除できる
+- Swagger UI でAPIの動作確認ができる
 
 ## 使用技術
 - Python
