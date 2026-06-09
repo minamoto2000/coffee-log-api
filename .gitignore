@@ -2,7 +2,5 @@
 __pycache__/
 *.pyc
 .cache/
-node_module/
-.cache/
 node_modules/
 coffee_logs.db
